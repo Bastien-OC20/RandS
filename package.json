@@ -24,6 +24,7 @@
     "nuxt": "^2.15.3",
     "nuxt-helmet": "^2.0.0",
     "nuxt-mail": "^1.0.12",
+    "nuxt-pdf": "^2.0.1",
     "nuxt-purgecss": "^1.0.0",
     "nuxt-use-sound": "^1.0.8",
     "pdfvuer": "^1.7.1",
@@ -31,6 +32,7 @@
     "sass-resources-loader": "^2.1.1",
     "vue": "^2.6.12",
     "vue-facebook-page": "^1.0.1",
+    "vue-pdf": "^4.2.0",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

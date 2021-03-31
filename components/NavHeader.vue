@@ -24,5 +24,6 @@ export default {
     .NavHeader {
 background: linear-gradient(1deg,#808080, #807B79, #808080, #807380 );
 border: 0.1em solid #778073;
+height:4em;
 }
 </style>

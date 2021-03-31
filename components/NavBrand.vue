@@ -2,6 +2,10 @@
   <div
     class="navLink d-flex flex-row justify-content-around"
   >
+    <div class="sound d-flex justify-content-left">
+      <!-- <Tooglesound />
+      <Playsound /> -->
+    </div>
     <div class=" element1 d-flex ">
       <Nuxt-link
         exact
@@ -35,26 +39,29 @@
 </template>
 
 <script>
+
+// import Playsound from '~/components/Playsound.vue'
+// import Tooglesound from '~/components/Tooglesound.vue'
+
 export default {
   name: 'NavBrand',
+  components: {
+    // Playsound,
+    // Tooglesound
+  },
   data () {
     return {
-
     }
   }
-
 }
 </script>
 
 <style lang="scss">
-.Nuxt-link-exact-active.presentation{
-  border-bottom-color: 2px solid orange;
-  width : 25px;
-}
 
 .LogoSite{
     width: 52px;
     display: flex;
+    margin-bottom: 0.4em;
 }
 
 .element1{
@@ -63,6 +70,7 @@ export default {
 
 .element2{
     margin-left: 5em;
+    font-size: 1em;
 }
 
 .presentation{
@@ -125,6 +133,7 @@ export default {
 
 .element2{
     margin-left: 20em;
+    height: 52px;
 }
 
 .presentation{

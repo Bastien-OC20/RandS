@@ -142,14 +142,20 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     assetsPublicPath: '/',
-    extend (config) {
+    extend (config, ctx) {
       // Find the rule which contains a assets file extension
       const assetsLoader = config.module.rules.find(rule => rule.test.test('.png'))
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|aac|mpe?g)$/i,
+        loader: 'file-loader'
+      })
 
       // Overwrite the test regex and add `pdf`
       assetsLoader.test = /\.(png|jpe?g|gif|svg|webp|pdf)$/i

@@ -47,41 +47,4 @@ a{
   text-decoration: none ! important;
 }
 
-.boxA {
-  animation: 1.5s linear boxt;
-}
-.boxB {
-  animation: 1s linear boxb;
-}
-.boxC {
-  animation: 1.5s linear para1;
-}
-@keyframes boxA {
-  0% {
-    opacity: 0;
-    transform: translateX(200%);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes boxB {
-  0% {
-    opacity: 0;
-    transform: translateX(-200%);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes boxC {
-  0% {
-    opacity: 0;
-    transform: translateY(-200%);
-  }
-  100% {
-    visibility: hidden;
-    opacity: 1;
-  }
-}
 </style>

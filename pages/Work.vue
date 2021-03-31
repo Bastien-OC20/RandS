@@ -8,17 +8,26 @@
     <Cigale />
     <article
       v-for="work in works"
-      :key="work"
+      :key="work.id"
       class="projet_card col-lg-4 d-flex flex-column justify-content-center justify-item-center"
     >
       <div class="projet_card-titre">
-        <h3 id="titreMod">
+        <h3
+          id="titreMod"
+          :key="work.titre"
+        >
           {{ work.titre }}
         </h3>
-        <h4 id="SoustitreMod">
+        <h4
+          id="SoustitreMod"
+          :key="work.Soustitre"
+        >
           {{ work.Soustitre }}
         </h4>
-        <p id="detailsMod">
+        <p
+          id="detailsMod"
+          :key="work.details"
+        >
           {{ work.details }}
         </p>
       </div>
@@ -27,6 +36,7 @@
       >
         <img
           id="imgMod"
+          :key="work.imgURL"
           :src="'./bg/'+ work.imgURL"
           class="projet_card-body_img"
           alt="Aperçu du projet"
@@ -45,6 +55,7 @@
         >
           <img
             id="imgMod1"
+            :key="work.imgURL1"
             :src="'./svg/'+ work.imgURL1"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL1 "
@@ -53,6 +64,7 @@
           >
           <img
             id="imgMod2"
+            :key="work.imgURL2"
             :src="'./svg/'+ work.imgURL2"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL2 "
@@ -61,6 +73,7 @@
           >
           <img
             id="imgMod3"
+            :key="work.imgURL3"
             :src="'./svg/'+ work.imgURL3"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL3 "
@@ -69,6 +82,7 @@
           >
           <img
             id="imgMod4"
+            :key="work.imgURL4"
             :src="'./svg/'+ work.imgURL4"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL4 "
@@ -77,6 +91,7 @@
           >
           <img
             id="imgMod5"
+            :key="work.imgURL5"
             :src="'./svg/'+ work.imgURL5"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL5 "
@@ -85,6 +100,7 @@
           >
           <img
             id="imgMod6"
+            :key="work.imgURL6"
             :src="'./svg/'+ work.imgURL6"
             class="projet_card-body-card_mod-logo"
             :alt="'made with ' + work.imgURL6 "
@@ -99,6 +115,7 @@
         <button class="btn col-lg-4 m-2">
           <a
             id="linkplusMod"
+            :key="work.linkPlus"
             :href="work.linkplus"
             target="_blank"
             title="Allez sur Github"
@@ -120,6 +137,7 @@
         >
           <a
             id="linkdemoMod"
+            :key="work.linkemo"
             :href="work.linkdemo"
             target="_blank"
             title="Voir la démo"

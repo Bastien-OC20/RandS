@@ -7,7 +7,7 @@
     <h2 class="titrAbout">
       {{ titre }}
     </h2>
-    <article id="boxA" class=" description">
+    <article id="boxA" class=" description ">
       <p class="text">
         {{ intro }}
       </p>
@@ -17,14 +17,17 @@
       <p class="text">
         {{ conclu }}
       </p>
+      <section class="download d-flex justify-content-left">
+        <a
+          href="downloads/Sébastien_Rapuzzi_CV_2020.pdf"
+          target="_blank"
+        >
+          Download CV
+        </a>
+      </section>
     </article>
     <Cigale />
-    <section>
-      <button>
-        Mon CV
-      </button>
-    </section>
-    <article class="competence">
+    <article class="competence ">
       <section id="boxB">
         <h3 class="titreComp">
           {{ outils }}
@@ -72,7 +75,7 @@
           >
         </div>
       </section>
-      <section id="boxC">
+      <section id="boxC" class="">
         <h3 class="titreComp">
           {{ competences }}
         </h3>
@@ -143,7 +146,11 @@
 
 export default {
   name: 'About',
+  components: {
+
+  },
   transition: 'fadeOpacity',
+
   data () {
     return {
       titre: 'About me',
@@ -176,8 +183,7 @@ export default {
 }
 
 .presentation.nuxt-link-exact-active.nuxt-link-active{
-  border-bottom: 3px solid orangered;
-  line-height: 0.5em;
+  border-bottom: 5px solid orangered;
 }
 
 .mainAbout {
@@ -195,6 +201,16 @@ export default {
   padding: 0.5em;
   &:hover{
       color:black;
+  }
+}
+.download a{
+  font-size: 1.2em;
+  color:black;
+  border: 1px orangered solid;
+  border-radius: 0.5em;
+  padding:0.2em;
+  &:hover{
+    color: #147dd3;
   }
 }
 

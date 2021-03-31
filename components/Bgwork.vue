@@ -58,10 +58,11 @@ h2:hover {
   border-radius: 0.5em;
   box-shadow: 15px 15px 8px rgb(160, 160, 160);
   transform: scale(1);
-  transition-property: transform;
+  transform: matrix3d(0);
   transition-duration: 1s, 1s;
   &:hover {
     transform: scale(1.1);
+
   }
 }
 
@@ -72,7 +73,7 @@ h2:hover {
 }
 
 .bgWork {
-  z-index: -1;
+  z-index: 0;
   position: absolute;
   width: 15em;
   top: -2em;

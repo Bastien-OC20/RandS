@@ -63,6 +63,7 @@ html {
   font-family: 'New Tegomin', serif ! important;
   text-decoration: none;
   box-sizing: border-box;
+  background: linear-gradient(1deg #e7e7e7, #bbbbbb, #808080);
 }
 
 .fadeOpacity-enter-active, .fadeOpacity-leave-active {
@@ -73,8 +74,9 @@ html {
 }
 
 .return.nuxt-link-exact-active.nuxt-link-active{
-  border-bottom: 3px solid orangered;
-  line-height: 0.5em;
+  display:block;
+  border-bottom: 5px solid orangered;
+  width:3.5em;
 }
 
 .index {
