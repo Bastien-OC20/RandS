@@ -8,6 +8,7 @@
     <Cigale />
     <article
       v-for="work in works"
+      id="card"
       :key="work.id"
       class="projet_card col-lg-4 d-flex flex-column justify-content-center justify-item-center"
     >
@@ -261,7 +262,7 @@ export default {
   },
   methods: {
 
-    function (work) {
+    function (work, card) {
       localStorage.setItem('titre', work.titre)
       document.getElementById('titreMod').textContent = `${work.titre}`
 
@@ -273,7 +274,6 @@ export default {
 
       localStorage.setItem('imgURL', work.imgURL)
       document.getElementById('imgMod').src = `${work.imgURL}`
-      work.imgURL.split('.').slice(0, -1).join('.')
 
       localStorage.setItem('linkplus', work.linkplus)
       document.getElementById('linkplusMod').src = `${work.linkplus}`
@@ -297,7 +297,9 @@ export default {
       document.getElementById('imgMod5').src = `${work.imgURL5}`
 
       localStorage.setItem('imgURL6', work.imgURL6)
-      document.getElementById('imgMod6').src = `${work.imgURL6}`
+      document.getElementById('imgMod6').src = `${work.imgURL6}`;
+
+      ('card').animate({ left: '250px' }, 500)
     }
   }
 }
@@ -325,10 +327,17 @@ export default {
     }
   }
   &_card{
-    border:1px solid #3949ab;
+    border:5px solid #3949ab;
     border-radius: 0.5em;
-    margin: 1em;
+    margin: 2em;
     padding: 0.5em;
+    box-shadow: 15px 20px 31px -4px rgba(0,0,0,0.19);
+    transform: scale(1);
+  transition-duration: 1s, 2s;
+  &:hover {
+    transform: scale(1.1);
+
+  }
     &-titre{
       background: linear-gradient(1deg, #5c6bc0, #3f51b5, #3949ab);
       border-radius: 0.5em 0.5em 0em 0em;

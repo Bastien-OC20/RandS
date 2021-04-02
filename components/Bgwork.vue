@@ -58,8 +58,7 @@ h2:hover {
   border-radius: 0.5em;
   box-shadow: 15px 15px 8px rgb(160, 160, 160);
   transform: scale(1);
-  transform: matrix3d(0);
-  transition-duration: 1s, 1s;
+  transition-duration: 1s, 2s;
   &:hover {
     transform: scale(1.1);
 
